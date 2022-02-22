@@ -1,0 +1,44 @@
+datasource postgres {
+  provider = "postgresql"
+  url      = env("POSTGRESQL_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  createdAt DateTime @default(now())
+  firstName String?
+  id        String   @id @default(cuid())
+  lastName  String?
+  password  String
+  roles     String[]
+  updatedAt DateTime @updatedAt
+  username  String   @unique
+}
+
+model FormWithCrudOperation {
+  countries    EnumFormWithCrudOperationCountries
+  createdAt    DateTime                           @default(now())
+  email        String
+  firstName    String?
+  gender       EnumFormWithCrudOperationGender[]
+  id           String                             @id @default(cuid())
+  lastName     String
+  mobileNumber Int?
+  password     String
+  updatedAt    DateTime                           @updatedAt
+}
+
+enum EnumFormWithCrudOperationCountries {
+  India
+  America
+  Germany
+  Australia
+}
+
+enum EnumFormWithCrudOperationGender {
+  Male
+  Female
+}
