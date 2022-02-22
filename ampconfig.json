@@ -1,0 +1,19 @@
+{
+  "dataServiceGeneratorVersion": "0.11.2",
+  "appInfo": {
+    "name": "Form Project",
+    "description": "",
+    "version": "6ijdh5m7",
+    "id": "ckzxqmj1m60627501s6mtptc60f",
+    "url": "https://app.amplication.com/ckzxqmj1m60627501s6mtptc60f",
+    "settings": {
+      "dbHost": "localhost",
+      "dbName": "",
+      "dbPassword": "admin",
+      "dbPort": 5432,
+      "dbUser": "admin",
+      "appId": "ckzxqmj1m60627501s6mtptc60f",
+      "authProvider": "Jwt"
+    }
+  }
+}
